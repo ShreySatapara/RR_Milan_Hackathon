@@ -2,8 +2,8 @@ from transformers import AutoModelForSequenceClassification
 from transformers import TFAutoModelForSequenceClassification
 from transformers import AutoTokenizer
 import numpy as np
-from scipy.special import softmax
 import csv
+from scipy.special import softmax
 import urllib.request
 
 task='sentiment'
@@ -26,5 +26,5 @@ def get_senti(text):
     print(final_scores/len(text))
     return final_scores #NEG NU POS
 
-text = ["go to hell","good morning",'how are you?']
+text = ["go to hell","good morning",'how are you?']             # sample array of texts(strings) 
 get_senti(text)
